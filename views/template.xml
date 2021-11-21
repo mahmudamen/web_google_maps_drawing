@@ -6,4 +6,5 @@
             <script type="text/javascript" src="/web_google_maps_drawing/static/src/js/widget/fields_registry.js"></script>
         </xpath>
     </template>
+
 </odoo>

@@ -1,5 +1,5 @@
 odoo.define('web_google_maps_drawing.FieldsRegistry', function (require) {
-  'use strict';
+'use strict';
 
   var registry = require('web.field_registry');
   var FieldMapDrawingShape = require('widget_google_maps_drawing.FieldMapDrawingShape');

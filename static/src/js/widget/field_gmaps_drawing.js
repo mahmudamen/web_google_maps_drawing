@@ -1,5 +1,5 @@
 odoo.define('web_google_maps_drawing.FieldMapDrawingShape', function (require) {
-    'use strict';
+'use strict';
 
     var core = require('web.core');
     var BasicFields = require('web.basic_fields');

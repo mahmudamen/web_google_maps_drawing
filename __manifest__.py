@@ -26,7 +26,7 @@ Allows users to draw polygons, rectangles, and circles on the map.
         'views/res_partner_area.xml',
     ],
     'qweb': ['static/src/xml/drawing.xml'],
-        "author": "Mahmudamen",
+    "author": "Mahmudamen",
     "website": "https://mahmudamen.github.io/ten/",
     "installable": True,
     "application": True,

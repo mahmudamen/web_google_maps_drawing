@@ -7,7 +7,6 @@ class GoogleMapsDrawingShapeMixin(models.AbstractModel):
     _description = 'Google Maps Shape Mixin'
     _rec_name = 'shape_name'
 
-    shape_id = fields.Many2one('res.partner', string='shape id')
     shape_name = fields.Char(string='Name')
     shape_area = fields.Float(string='Area')
     shape_radius = fields.Float(string='Radius')

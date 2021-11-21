@@ -10,9 +10,9 @@
             </xpath>
             <xpath expr="//notebook/page[1]" position="before">
                 <page string="Area" autofocus="autofocus">
-                <map name="shape_line_ids" library="drawing" string="Shape">
-                    <marker-popup>
-                        <field name="shape_name"/>
+                    <field name="shape_line_ids" mode="map">
+                        <map library="drawing" string="Shape">
+                            <field name="shape_name"/>
                             <field name="shape_description"/>
                             <field name="shape_type"/>
                             <field name="shape_radius"/>
@@ -35,8 +35,26 @@
                                     </div>
                                 </t>
                             </templates>
-                    </marker-popup>
-                </map>
+                        </map>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <group>
+                                        <field name="shape_name"/>
+                                        <!-- the widget needs this field to be loaded -->
+                                        <field name="shape_type" invisible="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="shape_area"/>
+                                        <field name="shape_radius"/>
+                                    </group>
+                                </group>
+                                <field name="shape_description"/>
+                                <separator string="Draw Shape"/>
+                                <field name="shape_paths" widget="map_drawing_shape"/>
+                            </sheet>
+                        </form>
+                    </field>
                 </page>
             </xpath>
         </field>

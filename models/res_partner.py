@@ -12,11 +12,10 @@ class respartnerarea(models.Model):
     partner_id = fields.Many2one(
         'res.partner', ondelete='cascade' )
 
+
 class ResPartners(models.Model):
     _inherit = ['res.partner']
-    _description = 'is entity company'
+    _description = 'shape_line_ids'
 
+    shape_line_ids = fields.One2many('res.partner.area', 'partner_id', string='Area')
     is_entity_company = fields.Boolean(string='entity company id')
-    shape_line_ids = fields.One2many(
-        'res.partner.area', 'partner_id', string='Area')
-

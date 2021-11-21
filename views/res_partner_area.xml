@@ -83,44 +83,5 @@
             </kanban>
         </field>
     </record>
-    <record id="view_res_partner_area_map" model="ir.ui.view">
-        <field name="name">view.res.partner.area.map</field>
-        <field name="model">res.partner.area</field>
-        <field name="arch" type="xml">
-
-            <map library="drawing" string="Shape">
-                <marker-popup>
-                <field name="partner_id"/>
-                <field name="shape_name"/>
-                <field name="shape_description"/>
-                <field name="shape_type"/>
-                <field name="shape_radius"/>
-                <field name="shape_area"/>
-                <field name="shape_paths"/>
-                </marker-popup>
-
-                <templates>
-                    <t t-name="kanban-box">
-                        <div class="oe_kanban_global_click">
-                            <div class="oe_kanban_details">
-                                <strong class="o_kanban_record_title oe_partner_heading">
-                                    <field name="shape_name"/>
-                                </strong>
-                                <div>
-                                    <field name="shape_description"/>
-                                </div>
-                                <div attrs="{'invisible': [('shape_type', 'not in', ['rectangle', 'polygon'])]}">
-                                    Area: <field name="shape_area"/>
-                                </div>
-                                <div attrs="{'invisible': [('shape_type', '!=', 'circle')]}">
-                                    Radius: <field name="shape_radius"/>
-                                </div>
-                            </div>
-                        </div>
-                    </t>
-                </templates>
-            </map>
-        </field>
-    </record>
 
 </odoo>
